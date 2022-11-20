@@ -65,25 +65,25 @@ namespace Kolos2
             sb.Append(miesiacString);
             string dzienString = dzien.ToString();
             sb.Append(dzienString.PadLeft(2, '0'));
-            sb.Append(rand.Next(9).ToString());
-            sb.Append(rand.Next(9).ToString());
-            sb.Append(rand.Next(9).ToString());
-            int liczba = rand.Next(9);
+            sb.Append(rand.Next(10).ToString());
+            sb.Append(rand.Next(10).ToString());
+            sb.Append(rand.Next(10).ToString());
+            int liczba = rand.Next(10);
             if (radioButton1.Checked)
             {
                 while (liczba % 2 != 0)
                 {
-                    liczba = rand.Next(9);
+                    liczba = rand.Next(10);
                 }
             } else if (radioButton2.Checked)
             {
                 while (liczba % 2 == 0)
                 {
-                    liczba = rand.Next(9);
+                    liczba = rand.Next(10);
                 }
             }
             sb.Append(liczba.ToString());
-            sb.Append(rand.Next(9).ToString());
+            sb.Append(rand.Next(10).ToString());
             label2.Text = sb.ToString();
         }
     }
